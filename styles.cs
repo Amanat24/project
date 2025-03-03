@@ -17,7 +17,90 @@ body {
   h1, h2, h3 {
     margin: 0;
   }
-  
+
+/* Hero Slider */
+#hero {
+  position: relative;
+  overflow: hidden;
+  height: 500px; 
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  position: relative;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5); 
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.slide-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.slide-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+/* Fallback for non-JS users */
+.slider {
+  display: block;
+}
+
+.slide {
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
   /* Menu Bar */
   nav {
     background: #28a745;
@@ -393,6 +476,25 @@ body {
       font-size: 2rem;
     }
     header p {
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    #hero {
+      height: 300px; 
+    }
+  
+    .slide-content h2 {
+      font-size: 2rem;
+    }
+  
+    .slide-content p {
+      font-size: 1rem;
+    }
+  
+    .prev, .next {
+      padding: 8px 12px;
       font-size: 1.2rem;
     }
   }
