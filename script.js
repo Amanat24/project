@@ -1,3 +1,4 @@
+
 // Smooth Scrolling
 document.querySelectorAll('a[data-scroll]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
@@ -66,3 +67,11 @@ function prevSlide() {
 
 // Auto-slide every 3 seconds
 setInterval(nextSlide, 3000);
+
+// FAQ Toggle Functionality
+document.querySelectorAll('.faq-item h3').forEach(item => {
+  item.addEventListener('click', () => {
+    const faqItem = item.parentElement;
+    faqItem.classList.toggle('active');
+  });
+});
