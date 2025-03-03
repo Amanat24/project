@@ -6,8 +6,8 @@
   <meta name="description" content="AgriSkill Development - Empowering farmers with modern agricultural skills through courses, blogs, and resources.">
   <title>AgriSkill Development</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> -->
 </head>
 <body>
   <!-- Menu Bar -->
@@ -25,14 +25,37 @@
     </div>
   </nav>
 
-  <!-- Header Section -->
-  <header id="home">
-    <div class="container">
-      <h1>Welcome to AgriSkill Development</h1>
-      <p>Empowering Farmers with Modern Skills</p>
-      <a href="#courses" class="btn" data-scroll>Explore Courses</a>
+  <!-- Hero Slider Section -->
+<section id="hero">
+  <div class="slider">
+    <div class="slide active">
+      <img src="images\agri1.jpg" alt="Sustainable Farming">
+      <div class="slide-content">
+        <h2>Learn Sustainable Farming</h2>
+        <p>Discover eco-friendly practices to protect the environment.</p>
+        <a href="#courses" class="btn">Explore Courses</a>
+      </div>
     </div>
-  </header>
+    <div class="slide">
+      <img src="images\agri4.jpg" alt="Soil Management">
+      <div class="slide-content">
+        <h2>Master Soil Management</h2>
+        <p>Improve soil health for better crop yields.</p>
+        <a href="#courses" class="btn">Explore Courses</a>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="images\agri3.jpg" alt="Organic Farming">
+      <div class="slide-content">
+        <h2>Start Organic Farming</h2>
+        <p>Grow crops without synthetic fertilizers or pesticides.</p>
+        <a href="#courses" class="btn">Explore Courses</a>
+      </div>
+    </div>
+  </div>
+  <button class="prev" onclick="prevSlide()">&#10094;</button>
+  <button class="next" onclick="nextSlide()">&#10095;</button>
+</section>
 
   <!-- About Section -->
   <section id="about">
