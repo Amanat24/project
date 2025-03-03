@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AgriSkill Development - Empowering farmers with modern agricultural skills through courses, blogs, and resources.">
   <title>AgriSkill Development</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -16,6 +18,8 @@
         <li><a href="#home" data-scroll>Home</a></li>
         <li><a href="#about" data-scroll>About</a></li>
         <li><a href="#courses" data-scroll>Courses</a></li>
+        <li><a href="#blogs" data-scroll>Blogs</a></li>
+        <li><a href="#testimonials" data-scroll>Testimonials</a></li>
         <li><a href="#contact" data-scroll>Contact</a></li>
       </ul>
     </div>
@@ -59,6 +63,50 @@
     </div>
   </section>
 
+  <!-- Blog Section -->
+  <section id="blogs">
+    <div class="container">
+      <h2>Latest Articles</h2>
+      <div class="blog-list">
+        <div class="blog">
+          <h3>5 Sustainable Farming Techniques</h3>
+          <p>Discover eco-friendly farming methods that improve yield and soil health.</p>
+          <a href="sustainable-farming.html">Read More</a>
+        </div>
+        <div class="blog">
+          <h3>How to Start Organic Farming?</h3>
+          <p>A beginner's guide to growing crops without synthetic fertilizers or pesticides.</p>
+          <a href="organic-farming.html">Read More</a>
+        </div>
+        <div class="blog">
+          <h3>Top 10 Crops for Profitable Farming</h3>
+          <p>Find out the best crops for high returns and sustainable agriculture.</p>
+          <a href="profitable-crops.html">Read More</a>
+        </div>
+      </div>
+      <div class="cta">
+        <p>Want to learn more? <a href="#subscribe">Subscribe to our newsletter</a> for weekly updates!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials">
+    <div class="container">
+      <h2>What Our Farmers Say</h2>
+      <div class="testimonial-list">
+        <div class="testimonial">
+          <p>"AgriSkill helped me improve my crop yield significantly!"</p>
+          <h4>- John Doe</h4>
+        </div>
+        <div class="testimonial">
+          <p>"The courses are practical and easy to follow. Highly recommended!"</p>
+          <h4>- Jane Smith</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact Section -->
   <section id="contact">
     <div class="container">
@@ -67,33 +115,33 @@
     </div>
   </section>
 
+  <!-- Subscription Section -->
+  <section id="subscribe">
+    <div class="container">
+      <h2>Subscribe to Our Newsletter</h2>
+      <form action="#" method="post">
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
   <!-- Footer Section -->
   <footer>
     <div class="container">
       <p>&copy; 2025 AgriSkill Development. All rights reserved.</p>
+      <div class="social-media">
+        <a href="#" target="_blank">Facebook</a>
+        <a href="#" target="_blank">Twitter</a>
+        <a href="#" target="_blank">Instagram</a>
+      </div>
     </div>
   </footer>
 
-  <!-- JavaScript for Smooth Scrolling -->
-  <script>
-    document.querySelectorAll('a[data-scroll]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
+  <!-- Back to Top Button -->
+  <button id="back-to-top" title="Go to top">↑</button>
 
-    // Sticky Navbar
-    window.addEventListener('scroll', function () {
-      const navbar = document.getElementById('navbar');
-      if (window.scrollY > 50) {
-        navbar.classList.add('sticky');
-      } else {
-        navbar.classList.remove('sticky');
-      }
-    });
-  </script>
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
