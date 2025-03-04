@@ -323,8 +323,8 @@ header p {
 
 /* Call-to-Action Banner */
 #cta-banner {
-  background: linear-gradient(135deg, #28a745, #218838); /* Green gradient background */
-  color: #fff; /* White text */
+  background: linear-gradient(135deg, #28a745, #218838); 
+  color: #fff;
   text-align: center;
   padding: 60px 0;
 }
@@ -495,9 +495,27 @@ header p {
   border-radius: 5px;
   margin-right: 10px;
 }
-
 #subscribe .btn {
   padding: 10px 20px;
+}
+
+#congrats-message {
+  margin-top: 20px;
+  padding: 15px;
+  background: #28a745;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Footer Section */
