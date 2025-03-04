@@ -20,12 +20,20 @@ window.addEventListener('scroll', function () {
 });
 
 // Form Validation
-document.querySelector('form').addEventListener('submit', function (e) {
+document.getElementById('subscribe-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+
   const email = document.querySelector('input[type="email"]').value;
+
   if (!email || !email.includes('@')) {
-    e.preventDefault();
     alert('Please enter a valid email address.');
+    return;
   }
+  const congratsMessage = document.getElementById('congrats-message');
+  congratsMessage.style.display = 'block';
+
+  document.querySelector('input[type="email"]').value = '';
+
 });
 
 // Back to Top Button
@@ -65,8 +73,8 @@ function prevSlide() {
   showSlide(currentSlide);
 }
 
-// Auto-slide every 3 seconds
-setInterval(nextSlide, 3000);
+// Auto-slide every 5 seconds
+setInterval(nextSlide, 5000);
 
 // FAQ Toggle Functionality
 document.querySelectorAll('.faq-item h3').forEach(item => {
